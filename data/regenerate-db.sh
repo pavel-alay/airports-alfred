@@ -1,6 +1,10 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 PATH_DB="../airports.db"
+
+curl -s https://ourairports.com/data/airports.csv -o airports.csv
+curl -s https://ourairports.com/data/regions.csv -o regions.csv
+curl -s https://ourairports.com/data/countries.csv -o countries.csv
 
 if test "$PATH_DB"; then
     echo "$PATH_DB already exist"
