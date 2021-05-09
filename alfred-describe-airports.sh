@@ -11,7 +11,6 @@ query="
 SELECT json_object('items',
                    json_group_array(
                        json_object(
-                           'uid', code,
                            'arg', code,
                            'title', code || ': ' || name || ', ' || country,
                            'subtitle', continent || ', ' || country || ', ' || region || ', ' || municipality)
